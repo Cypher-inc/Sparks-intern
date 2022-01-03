@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Covid Tracker</title>
+
+  </head>
+  <body onload="fetch()">
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    
+    <!-- **************************jquery************************** -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_style p-3">
+        
+        <a class="navbar-brand pl-4"  href="index.html" >Covid-19 Live</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#IndiaId">India</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#AboutId">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#symId">Symptoms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#prevId">Prevention</a>
+              </li>
+
+          </ul>
+        
+          <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+          
+          <div class="button_1">
+          <a type="button" class="btn btn-warning btn-block" href="#donate">Donate!</a>
+          </div>
+          <!-- <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IfHvF1ymDy0yBH" async> </script> </form> -->
+        </div>
+      </nav>
+
+    <main>
+        <div class="jumbotron jumbotron-fluid jumbo_style">
+            <div class="container">
+              <h1 class="display-4">Corona Live Tracker</h1>
+              <p class="lead">Stay home, stay safe!</p>
+         
+            </div>
+          </div>
+
+        <section class="corona-update ">
+          <div class=" pt-4 mb-4">
+            <!--<h3 class="display-4 text-center">Display 3</h3>-->
+            <h2 class="font-weight-light text-center">Covid-19 Live Worldwide</h2>
+          </div>
+
+
+        
+          <div  class=" justify-content-around align-items-center pb-4">
+            <!-- <div class="jumbotron jumbotron-fluid jumbo_style"> -->
+            <div class="mb-4">
+              <h1 class="font-weight-normal count"   id="tbval"></h1>
+              <h5 class="font-weight-light">Total Cases</h5>
+            </div>
+
+            <div class="mb-4">
+              <h1 class="font-weight-normal count"  id="tbval1"></h1>
+              <h5 class="font-weight-light">New Cases</h5>
+            </div>
+
+            <div class="mb-4">
+              <h1 class="font-weight-normal count"  id="tbval2"></h1>
+              <h5 class="font-weight-light">Total Deaths</h5>
+            </div>
+
+            <div class="mb-4">
+              <h1 class="font-weight-normal count"  id="tbval3"></h1>
+              <h5 class="font-weight-light">New Deaths</h5>
+            </div>
+
+            <div class="">
+              <h1 class="font-weight-normal count world_rec"  id="tbval4"></h1>
+              <h5 class="font-weight-light">Total Recovered</h5>
+            </div>
+        </div>
+
+          <!-- </div> -->
+
+
+        </section>
+
+
+
+        <!-- -------------------------------------India---------------------------------->
+
+
+        <div class="jumbotron jumbotron-fluid jumbo_style India_jumbo" id="IndiaId">
+          <div class="container">
+            <h2 class="font-weight-light text-center india_head">Covid-19 Live India</h2>
+          </div>
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <img src="india.png" class="img-fluid" width="200px" height="200px">
+              </div>
+
+               
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="font-weight-normal count"   id="indiaval">123414</h3>
+                  <h5 class="font-weight-light pb-3">Total Cases</h5>
+                  </div>
+                  <div class="col">
+                    <h3 class="font-weight-normal count"   id="indiaval1">2354</h3>
+                  <h5 class="font-weight-light pb-3">New Cases</h5>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col">
+                    <h3 class="font-weight-normal count"   id="indiaval2">23542</h3>
+                  <h5 class="font-weight-light">Total Deaths</h5>
+                  </div>
+                  <div class="col">
+                    <h3 class="font-weight-normal count"   id="indiaval3">23452</h3>
+                  <h5 class="font-weight-light">New Deaths</h5>
+                  </div>
+                  
+                    <div class="w-100"></div>
+                    <div class="col">
+                      <h3 class="font-weight-normal count pt-3 world_rec"   id="indiaval4"></h3>
+                    <h5 class="font-weight-light">Total Recovered</h5>
+                    </div>
+                    <div class="col">
+                      <h3 class="font-weight-normal count pt-3 w_cases"  id="indiaval5"></h3>
+                      <h5 class="font-weight-light">Active Cases</h5>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+            </div>
+        
+            </div>
+        
+          </div>
+
+
+       
+
+    </main>
+
+    <!---------------------------------About------------------------------------>
+
+ <!-- <div class="container-fluid sub_section pt-5 pb-5" id="symId">
+  <div class="section_header text-center mb-5 mt-4">
+      <h1>Symptoms</h1>
+  </div>
+
+</div>  -->
+
+<div class="jumbotron jumbotron-fluid jumbo_style About_jumbo" id="AboutId">
+  <div class="container">
+    <h1>About</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 pt-5">
+        <img src="virus.png" class="img-fluid" width="300px" height="300px">
+      </div>
+      <div class="col-12 pt-5">
+        <h3>What is Covid-19 (Coronavirus)?</h3>
+        <!-- <p class="font-weight-normal about_txt mt-3 ml-3">Coronavirus disease 2019 (COVID-19) is a contagious respiratory disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a specific type of coronavirus, responsible for an ongoing pandemic. Common symptoms include fever, cough, fatigue, breathing difficulties, and loss of smell and taste. COVID-19 mainly spreads through the air when people are near each other, primarily via small droplets or aerosols, as an infected person breathes, coughs, sneezes, or speaks. It can spread as early as two days before infected persons show symptoms (presymptomatic), and from those who do not show any (asymptomatic).</p> -->
+        <p class="font-weight-normal about_txt mt-3 ml-3">Coronavirus disease 2019 (COVID-19) is a contagious respiratory disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a specific type of coronavirus, responsible for an ongoing pandemic. COVID-19 mainly spreads through the air when people are near each other, primarily via small droplets or aerosols, as an infected person breathes, coughs, sneezes, sings, or speaks. Transmission via contaminated surfaces has not been conclusively demonstrated. It can spread as early as two days before infected persons show symptoms, and from those who do not show any.</p>
+
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+<!-------------------------------------Symptoms------------------------------------>
+
+ <!-- <div class="container-fluid sub_section pt-5 pb-5" id="symId">
+  <div class="section_header text-center mb-5 mt-4">
+      <h1>Symptoms</h1>
+  </div>
+
+</div>  -->
+
+    <div class="jumbotron jumbotron-fluid jumbo_style sym_jumbo" id="symId">
+      <div class="container">
+        <h1>Symptoms</h1>
+        <!-- <p class="lead">Stay home, stay safe!</p> -->
+      </div>
+      
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+
+            <figure class="text-center">
+
+            <img src="fever.png" class="img-fluid" width="120px" height="120px"> 
+            <p class="font-weight-normal">Fever</p>
+          </figure>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+          
+          <figure class="text-center">
+
+            <img src="cough.png" class="img-fluid" width="120px" height="120px"> 
+            <p class="font-weight-normal">Cough</p>
+          </figure>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+
+            <figure class="text-center">
+
+            <img src="breathing.png" class="img-fluid" width="120px" height="120px"> 
+            <p class="font-weight-normal">Difficulty Breathing</p>
+          </figure>
+          </div>
+
+
+         
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+
+            <figure class="text-center">
+
+            <img src="tired.png" class="img-fluid" width="120px" height="120px"> 
+            <p class="font-weight-normal">Tiredness</p>
+          </figure>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+
+            <figure class="text-center">
+
+            <img src="cold.png" class="img-fluid" width="120px" height="120px"> 
+            <p class="font-weight-normal">Cold</p>
+          </figure>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+
+            <figure class="text-center">
+
+            <img src="sore-throat.png" class="img-fluid" width="120px" height="120px"> 
+            <p class="font-weight-normal">Sore Throath</p>
+          </figure>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+         <!-- *************************** 6 steps **************************** -->
+
+<div class="jumbotron jumbotron-fluid jumbo_style prev_jumbo" id="prevId">
+      <div class="container">
+        <h1>Prevention Against Coronavirus</h1>
+        <!-- <p class="lead">Stay home, stay safe!</p> -->
+      </div>
+      
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <figure class="text-center">
+
+                  <img src="hand-wash.png" class="img-fluid" width="90px" height="90px"> 
+                  <!-- <p class="font-weight-light">wash your hands regurlarly</p> -->
+                </figure>
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-12">
+                <p class="font-weight-normal prev_txt">Clean your hands often. Use soap and water, or an alcohol-based hand rub</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <figure class="text-center">
+
+                  <img src="social-distancing.png" class="img-fluid" width="90px" height="90px"> 
+                  <!-- <p class="font-weight-light">wash your hands regurlarly</p> -->
+                </figure>
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-12">
+                <p class="font-weight-normal prev_txt">Practice Social Distancing: Avoid gatherings such as melas, gatherings in religious places, social functions etc</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <figure class="text-center">
+
+                  <img src="mask.png" class="img-fluid" width="90px" height="90px"> 
+                  <!-- <p class="font-weight-light">wash your hands regurlarly</p> -->
+                </figure>
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-12">
+                <p class="font-weight-normal prev_txt">Wear a mask, make sure it covers both your nose, mouth and chin</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <figure class="text-center">
+
+                  <img src="stay-home.png" class="img-fluid" width="90px" height="90px"> 
+                  <!-- <p class="font-weight-light">wash your hands regurlarly</p> -->
+                </figure>
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-12">
+                <p class="font-weight-normal prev_txt">Stay home and self isolate from others if you feel unwell</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <figure class="text-center">
+
+                  <img src="fever_prev.png" class="img-fluid" width="90px" height="90px"> 
+                  <!-- <p class="font-weight-light">wash your hands regurlarly</p> -->
+                </figure>
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-12">
+                <p class="font-weight-normal prev_txt">If you have a fever, cough and difficulty breathing, seek medical attention</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-12">
+                <figure class="text-center">
+
+                  <img src="smart-tv.png" class="img-fluid" width="90px" height="90px"> 
+                  <!-- <p class="font-weight-light">wash your hands regurlarly</p> -->
+                </figure>
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-12">
+                <p class="font-weight-normal prev_txt">Stay informed by watching news & follow the recommended practices</p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+       </div>
+</div>
+
+
+
+
+
+<footer class=" mb-1" id="donate">
+  <div class="jumbotron mb-1">
+      <h1>Donate!</h1>
+      <p class="font-weight-normal donate_txt mt-3 ml-3">The world is facing an unprecedented challenge with communities and economies everywhere affected by the growing COVID-19 pandemic. 
+        The world is coming together to combat the COVID-19 pandemic bringing governments, organizations from across industries and sectors and individuals together to help respond to this global outbreak.
+      You can be a part of this change and help make the world a better place by donating to this cause!</p>
+
+      <div class="donations">
+        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IfHvF1ymDy0yBH" async> </script> </form>
+
+      </div>
+
+   
+        <div class="copyrights">
+          <p>© Copyright 2022 Kris Victor Dsouza</p>
+        </div>
+  </div>
+</footer>
+
+<!-- <footer class="jumbotron mb-1 mt-5 text-center">
+  <h5>Socials</h5>
+
+  <a href="https://www.instagram.com/kris_withh_a_k/">
+    <img class="footer-logo mx-3" src="insta1.png" alt="Instagram" />
+  </a>
+
+  <a href="https://twitter.com/explore">
+    <img class="footer-logo mx-3" src="twitter copy.png" alt="twitter" />
+  </a>
+
+
+  <a href="https://www.reddit.com/">
+    <img class="footer-logo mx-3" src="reddit.png" alt="Reddit" />
+  </a>
+
+ 
+
+</footer> -->
+
+    <!----------------------------------button-------------------------------------->
+
+   
+   
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#x2191;</button>
+
+
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script> 
+
+
+
+    <!-- Icons made by <a href="https://creativemarket.com/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <!-- <script type="text/JavaScript">
+    $('.count').counterUP({
+      delay:10,
+      time:3000
+    }) -->
+
+  </script>
+
+
+  <script>
+
+   function fetch() {
+      $.get("https://api.apify.com/v2/key-value-stores/SmuuI0oebnTWjRTUh/records/LATEST?disableRedirect=true",
+  
+      function  (data){
+        // console.log(data['Countries'].length);
+        var tbval = document.getElementById('tbval');
+        tbval.innerHTML= data['regionData'][0]['totalCases'];
+        tbval1.innerHTML= data['regionData'][0]['newCases'];
+        tbval2.innerHTML= data['regionData'][0]['totalDeaths'];
+        tbval3.innerHTML= data['regionData'][0]['newDeaths'];
+        tbval4.innerHTML= data['regionData'][0]['totalRecovered'];
+
+        indiaval.innerHTML= data['regionData'][6]['totalCases'];
+        indiaval1.innerHTML= data['regionData'][6]['newCases'];
+        indiaval2.innerHTML= data['regionData'][6]['totalDeaths'];
+        indiaval3.innerHTML= data['regionData'][6]['newDeaths'];
+        indiaval4.innerHTML= data['regionData'][6]['totalRecovered'];
+        indiaval5.innerHTML= data['regionData'][6]['activeCases'];
+      }
+      )
+   }
+
+
+   
+  //  $('.count').counterUP({
+  //     delay:10,
+  //     time:3000
+  //   })
+
+
+        // var GFG = function () { 
+        //   $.get("https://api.covid19api.com/summary")
+        
+        //       function (data){
+        //         console.log(data['Countries'].length);
+        //       }
+        //           } 
+
+        //     document.write(GFG()); 
+
+
+        
+        </script>
+  
+
+</body>
+</html>

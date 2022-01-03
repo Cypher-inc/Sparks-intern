@@ -1,0 +1,218 @@
+/* Modify the backgorund color */ 
+.nav_style{ 
+	background-color: lightgreen!important; 
+} 
+
+html{
+    scroll-behavior: smooth;
+}
+
+.jumbo_style{
+    text-align: center;
+    font-weight: bold;
+}
+
+p.thick {
+    font-weight: bold;
+  }
+  
+
+  .footer-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+
+
+/* *****************************Worldwide****************************** */
+
+
+.corona-update{
+    margin: 0 0 30px 0;
+    background-color: transparent!important;
+
+}
+
+.corona-update h2{
+    /* color: #ff7675 */
+    color: #ff7675
+
+
+
+}
+
+.corona-update h1{
+    text-align: center;
+
+}
+
+.corona-update h5{
+
+    text-align: center;
+
+}
+
+.world_rec{
+    /* color:#ACE6b9 */
+    color:#90c99E;
+}
+
+.w_cases{
+    /* color: #949494; */
+    color: #808080
+
+}
+
+
+/* ******************************India***************************** */
+
+.india_jumbo{
+    background-color: #eff2f4;
+}
+
+.india_head{
+    color: #1261A0;
+}
+
+
+
+/* ***********************About**************************** */
+
+.About_jumbo{
+    background-color: transparent!important;
+}
+
+
+.about_txt{
+    text-align: left;
+   }
+
+   .about_h1{
+    text-align: left;
+   }
+
+   .about_img{
+       align-items: center;
+   }
+
+/* *************************Prevention*****************  */
+
+.sub_section{
+    background-color: #eee;
+}
+
+
+.prev_jumbo{
+    background-color: transparent!important;
+}
+ 
+
+/* *************************Symptoms*****************  */
+
+.sym_jumbo{
+    background-color: #eff2f4;
+    /* background-color: #fbfbfb */
+    /* background-color: #f7fbfd; */
+}
+
+
+/* *****************************Button********************** */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  #myBtn:hover {
+    background-color: darkslategrey;
+   }
+
+
+   .prev_txt{
+    text-align: left;
+   }
+
+
+ .navbar-collapse .btn {
+    margin-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+/* /////////////////footer/////////////////// */
+
+footer{
+    background-color: #808080;
+}
+footer h1{
+    text-align: center;
+}
+footer p{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+footer .donations form{
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    text-align: center;
+}
+
+footer .jumbotron{
+    padding-bottom: 5px;
+    padding-left:12%;
+    padding-right:12%;
+
+}
+
+footer .copyrights p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.button_1 .btn{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div ul a{
+    font-weight: 500;
+}
+nav .navbar-brand{
+    text-align: center;
+    font-size: 25px;
+}
+
+/* ///////////////////////media////////////////////// */
+@media(max-width: 992px) {
+
+nav a{
+    text-align: center !important;
+
+}
+div ul{
+    text-align: center;
+}
+
+div a{
+    margin: 0px auto 0px auto;
+}
+
+  }
+  
